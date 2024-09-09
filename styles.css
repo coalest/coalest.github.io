@@ -1,0 +1,296 @@
+/* CSS Reset Start */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+/* CSS Reset End */
+
+:root {
+  --primary: rgba(0, 147, 103, 1);
+  --accent: rgba(0, 147, 103, 0.1);
+  --text-color-secondary: rgba(120, 120, 120, 1);
+  --text-color: rgba(42, 38, 38, 1);
+  --font: 'Libre Franklin';
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  max-width: fit-content;
+  font-family: var(--font), sans-serif;
+  color: var(--text-color);
+  margin: 20% 10%;
+}
+
+a {
+  color: inherit;
+  text-decoration: solid underline var(--primary) 2px;
+  text-underline-offset: 0.2rem;
+}
+
+.intro a {
+  text-underline-offset: 0.4rem;
+}
+
+a:hover {
+  text-decoration-style: dotted;
+}
+
+nav ul li.active, nav ul li a:hover {
+  color: var(--primary);
+}
+
+nav ul li.active::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+}
+
+nav ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+b {
+  font-weight: 600;
+}
+
+nav {
+  display: none;
+}
+
+.background p {
+  margin-bottom: 2rem;
+}
+
+.job-duration {
+  white-space: nowrap;
+}
+
+.intro h1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #2A2626;
+  line-height: 3.125rem;
+  padding: inherit;
+  margin-bottom: 60px;
+}
+
+.intro h1 + p {
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 2.5rem;
+  max-width: 536px;
+  margin-bottom: 80px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  padding: inherit;
+}
+
+img.portrait {
+  display: none;
+  float: right;
+  border-radius: 20%;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.name {
+  color: var(--primary);
+  font-weight:700;
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: var(--primary);
+}
+
+h2, nav ul li {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 10px 10px 0;
+}
+
+.background p {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  gap: 2px;
+}
+
+div.skills {
+  grid-area: skills;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  rows: 1fr 1fr;
+  gap: 24px 48px;
+}
+
+.skills ul li {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.375rem;
+  padding: 0.25rem 0;
+
+}
+
+.skills h3 {
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+ul.skills-used {
+  gap: 10px;
+}
+
+ul.skills-used li {
+  display: inline-block;
+  background-color: var(--accent);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  margin: 16px 8px 0px 0px;
+}
+
+p.job-duration {
+  margin: 10px 0;
+  color: var(--text-color-secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+p.job-title {
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+p.experience {
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+@media (width < 960px) {
+  main > div {
+    margin-bottom: 50px;
+  }
+
+  .experience > section {
+    margin-bottom: 50px;
+  }
+}
+
+@media (width >= 960px) {
+  main {
+    max-width: 1024px;
+    display: grid;
+    grid-template-areas:
+      "intro intro intro"
+      "navbar . background"
+      "navbar . skills"
+      "navbar . experience";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr minmax(50px, 1fr) minmax(min-content, 3fr);
+    gap: 200px 0px;
+    justify-content: space-between;
+  }
+
+  body {
+    margin: 279px auto 100px auto;
+  }
+
+  main {
+    margin: 0 80px;
+  }
+
+  img.portrait {
+    display: inline;
+    width: 270px;
+    height: 270px;
+    margin-top: 31px;
+    margin-left: 20px;
+  }
+
+  nav {
+    grid-area: navbar;
+    position: sticky;
+    align-self: start;
+    top: 10rem;
+    display: initial;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro h1::before {
+    content: "👋 \00a0 ";
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .intro {
+    padding: 10px 0;
+    grid-area: intro;
+  }
+
+  .background {
+    grid-area: background;
+  }
+
+  div.skills {
+    grid-area: skills;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+
+  .experience {
+    grid-area: experience;
+  }
+
+  .experience section {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 150px 3fr;
+    column-gap: 46px;
+    margin-bottom: 60px;
+  }
+}
