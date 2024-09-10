@@ -50,10 +50,6 @@ a {
   text-underline-offset: 0.2rem;
 }
 
-nav a {
-  text-decoration: none;
-}
-
 .intro a {
   text-underline-offset: 0.4rem;
 }
@@ -62,27 +58,12 @@ a:hover {
   text-decoration-style: dotted;
 }
 
-
-nav ul li.active, nav ul li a:hover {
-  color: var(--primary);
-}
-
-nav ul li.active::before {
-  content: "•";
-  position: absolute;
-  left: -1rem;
-}
-
-nav ul li:not(:last-child) {
-  margin-bottom: 10px;
+h2 a {
+  text-decoration: none;
 }
 
 b {
   font-weight: 600;
-}
-
-nav {
-  display: none;
 }
 
 .background p {
@@ -138,9 +119,6 @@ img.portrait {
 
 h2 {
   color: var(--primary);
-}
-
-h2, nav ul li {
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
@@ -301,24 +279,12 @@ footer a {
     margin-left: 20px;
   }
 
-  nav {
-    grid-area: navbar;
-    position: sticky;
-    align-self: start;
-    top: 10rem;
-    display: initial;
-  }
-
   .intro h1 {
     font-size: 2.5rem;
   }
 
   h2 {
     text-align: right;
-  }
-
-  h2 a {
-    text-decoration: none;
   }
 
   h2#background {
