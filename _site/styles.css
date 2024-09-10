@@ -25,9 +25,9 @@ p, h1, h2, h3, h4, h5, h6 {
 /* CSS Reset End */
 
 :root {
-  --primary: rgba(0, 147, 103, 1);
+  --primary: rgba(0, 135, 104, 1);
   --accent: rgba(0, 147, 103, 0.1);
-  --text-color-secondary: rgba(120, 120, 120, 1);
+  --text-color-secondary: rgba(117, 117, 117, 1);
   --text-color: rgba(42, 38, 38, 1);
   --font: 'Libre Franklin';
 }
