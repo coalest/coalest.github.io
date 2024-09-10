@@ -104,6 +104,10 @@ nav {
   margin-bottom: 60px;
 }
 
+.intro h1::before {
+  content: "👋 \00a0 ";
+}
+
 .intro h1 + p {
   font-weight: 400;
   font-size: 1.375rem;
@@ -267,10 +271,6 @@ p.experience {
 
   .intro h1 {
     font-size: 2.5rem;
-  }
-
-  .intro h1::before {
-    content: "👋 \00a0 ";
   }
 
   h2 {
