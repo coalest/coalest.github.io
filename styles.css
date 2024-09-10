@@ -126,6 +126,10 @@ h2 {
   padding: 10px 10px 10px 0;
 }
 
+.background p:first-child {
+  padding-top: 10px;
+}
+
 .background p {
   font-size: 1.125rem;
   line-height: 1.875rem;
