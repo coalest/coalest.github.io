@@ -233,6 +233,31 @@ footer a {
   text-decoration: none;
 }
 
+.button {
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.button:hover {
+  background: var(--text-color);
+  color: white;
+}
+
+.experience img, .experience svg {
+  display: inline;
+  height: 1.25rem;
+}
+
+.experience a {
+  grid-column: 2;
+  max-width: max-content;
+}
+
 @media (width < 960px) {
   main > div {
     margin-bottom: 50px;
