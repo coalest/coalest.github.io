@@ -42,7 +42,6 @@ body {
   max-width: fit-content;
   font-family: var(--font), sans-serif;
   color: var(--text-color);
-  margin: 20% 10%;
 }
 
 a {
@@ -220,6 +219,20 @@ p.experience {
   font-size: 0.875rem;
 }
 
+footer ul {
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+}
+
+footer a {
+  font-size: 0.875rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 @media (width < 960px) {
   main > div {
     margin-bottom: 50px;
@@ -227,6 +240,10 @@ p.experience {
 
   .experience > section {
     margin-bottom: 50px;
+  }
+
+  body{
+    margin: 20% 10% 5% 10%;
   }
 }
 
@@ -243,13 +260,14 @@ p.experience {
     grid-template-columns: 1fr minmax(50px, 1fr) minmax(min-content, 3fr);
     gap: 200px 0px;
     justify-content: space-between;
+    margin: 0 80px 90px;
   }
 
   body {
-    margin: 279px auto 100px auto;
+    margin: 200px auto 50px auto;
   }
 
-  main {
+  footer {
     margin: 0 80px;
   }
 
