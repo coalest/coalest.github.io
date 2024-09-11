@@ -26,7 +26,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 :root {
   --primary: rgba(0, 135, 104, 1);
-  --accent: rgba(0, 147, 103, 0.1);
+  --accent: rgba(0, 135, 104, 0.1);
   --text-color-secondary: rgba(117, 117, 117, 1);
   --text-color: rgba(42, 38, 38, 1);
   --font: 'Libre Franklin';
@@ -39,9 +39,12 @@ html {
 }
 
 body {
-  max-width: fit-content;
   font-family: var(--font), sans-serif;
   color: var(--text-color);
+}
+
+main {
+  max-width: fit-content;
 }
 
 a {
@@ -201,36 +204,48 @@ p.experience {
   font-size: 0.875rem;
 }
 
-footer ul {
+footer {
   text-align: center;
-  gap: 2rem;
+  color: white;
+  height: 415px;
+  background: var(--primary);
+  padding: 80px 0;
+}
+
+footer h1 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  padding-bottom: 32px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 62px;
+}
+
+footer li a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 2.8125rem;
+  height: 2.8125rem;
 }
 
 footer p {
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-footer p a {
-  color: inherit;
-  text-transform: none;
-  font-size: inherit;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-footer ul li {
-  display: inline-block;
-  padding: 0 10px;
-}
-
-footer a {
+  padding-top: 36px;
   font-size: 0.875rem;
-  color: var(--primary);
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 4px 4px rgba(0,0,0, 0.25));
+  width: 60%;
+  margin: 0 auto;
 }
 
 .button {
@@ -248,7 +263,7 @@ footer a {
   color: white;
 }
 
-.experience img, .experience svg {
+.experience img {
   display: inline;
   height: 1.25rem;
 }
@@ -257,6 +272,15 @@ footer a {
   grid-column: 2;
   max-width: max-content;
 }
+.svg {
+  display: inline;
+  filter: invert(7%) sepia(5%) saturate(1433%) hue-rotate(317deg) brightness(101%) contrast(80%);
+}
+
+a:hover .svg {
+  filter: invert(100%);
+}
+
 
 @media (width < 960px) {
   main > div {
@@ -267,18 +291,29 @@ footer a {
     margin-bottom: 50px;
   }
 
-  body{
+  main {
     margin: 20% 10% 5% 10%;
   }
 
+  footer h1 {
+    font-size: 2.375rem;
+    font-weight: 400;
+    padding-bottom: 32px;
+  }
+
   footer ul {
-    margin-bottom: 10px;
+    margin-bottom: 32px;
+  }
+
+  footer {
+    height: 335px;
+    padding: 40px 0;
   }
 }
 
 @media (width >= 960px) {
   main {
-    max-width: 1024px;
+    max-width: 1184px;
     display: grid;
     grid-template-areas:
       "intro intro"
@@ -289,15 +324,8 @@ footer a {
     grid-template-columns: 1fr minmax(min-content, 3fr);
     gap: 200px 10%;
     justify-content: space-between;
-    margin: 0 80px 90px 80px;
-  }
-
-  body {
-    margin: 200px auto 50px auto;
-  }
-
-  footer {
-    margin: 0 80px;
+    padding: 0 80px;
+    margin: 200px auto 0 auto;
   }
 
   img.portrait {
@@ -354,14 +382,5 @@ footer a {
     grid-template-columns: 150px 3fr;
     column-gap: 46px;
     margin-bottom: 60px;
-  }
-
-  footer ul {
-    float: right;
-    gap: 2rem;
-  }
-
-  footer p {
-    display: inline;
   }
 }
