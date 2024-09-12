@@ -2,24 +2,15 @@
 <html lang="en">
     <head>
         <title>Cory Streiff | Software Developer</title>
-        <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=swap"
-            as="style"
-            onload="this.onload=null;this.rel='stylesheet'"
-        />
-        <noscript>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=swap"
-                rel="stylesheet"
-                type="text/css"
-            />
-        </noscript>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..700&display=block" rel="stylesheet">
         <link rel="stylesheet" href="/styles.css">
         <link rel="icon" sizes="any" type="image/svg+xml" href="/src/favicon/favicon.svg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Personal website of Cory Streiff (coalest)"
+        <meta name="description" content="Personal website of Cory Streiff (coalest)">
         <meta charset="UTF-8">
+        <script src="/bundle.js" defer></script>
     </head>
 
     <body>
@@ -36,8 +27,15 @@
                     </p>
                 </div>
             </div>
-            <h2 id="background"><a href="#background">Background</a></h2>
-            <div class="background">
+            <nav>
+                <ul>
+                    <li class="background"><a href="#background">Background</a></li>
+                    <li class="skills"><a href="#skills">Skills</a></li>
+                    <li class="experience"><a href="#experience">Experience</a></li>
+                </ul>
+            </nav>
+            <h2><a href="#background">Background</a></h2>
+            <div id="background" class="background">
                 <p>
                     I graduated from Georgia Institute of Technology with a degree in Material Science & Engineering. I worked in that field for six years, first at an <a href="https://www.vercomaterialsllc.com/" target="_blank">R&D startup making ceramic body armor</a> and then at a <a href="https://www.materialconnexion.com/" target="_blank">materials consultancy in New York</a>, working with designers and engineers at Fortune 500 companies.
                 </p>
@@ -48,8 +46,8 @@
                     Most recently, I've been working at a <a href="https://ragnarson.com" target="_blank">software house</a>, where I helped build a Learning Management System (LMS) from the ground up using Ruby on Rails, Grape, and Postgres.</p>
                 </p>
             </div>
-            <h2 id="skills"><a href="#skills">Skills</a></h2>
-            <div class="skills">
+            <h2><a href="#skills">Skills</a></h2>
+            <div id="skills" class="skills">
                 <div>
                     <h3>Languages</h3>
                     <ul>
@@ -93,8 +91,8 @@
                     </ul>
                 </div>
             </div>
-            <h2 id="experience"><a href="#experience">Experience</a></h2>
-            <div class="experience">
+            <h2><a href="#experience">Experience</a></h2>
+            <div id="experience" class="experience">
                 <section> 
                     <div>
                         <p class="job-duration">Jun 2022 - Present</p>
