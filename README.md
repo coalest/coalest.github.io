@@ -1,4 +1,4 @@
-The personal website of Cory Streiff
+My personal website
 
 # Documentation
 
