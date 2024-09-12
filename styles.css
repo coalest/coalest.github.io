@@ -35,7 +35,6 @@ p, h1, h2, h3, h4, h5, h6 {
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
 }
 
 body {
@@ -324,8 +323,8 @@ a:hover .svg {
     grid-template-columns: 1fr minmax(min-content, 3fr);
     gap: 200px 10%;
     justify-content: space-between;
-    padding: 0 80px;
-    margin: 200px auto 0 auto;
+    padding: 200px 80px;
+    margin: 0 auto;
   }
 
   img.portrait {
