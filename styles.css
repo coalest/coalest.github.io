@@ -271,6 +271,10 @@ footer li a:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+footer a {
+  text-decoration: underline;
+}
+
 footer p {
   padding-top: 36px;
   font-size: 0.875rem;
@@ -305,6 +309,7 @@ footer p {
   grid-column: 2;
   max-width: max-content;
 }
+
 .svg {
   display: inline;
   filter: invert(7%) sepia(5%) saturate(1433%) hue-rotate(317deg) brightness(101%) contrast(80%);
