@@ -365,7 +365,7 @@ a:hover .svg {
 
 @media (width >= 960px) {
   main {
-    max-width: 1184px;
+    max-width: 1284px;
     display: grid;
     grid-template-areas:
       "intro intro intro"
@@ -382,9 +382,9 @@ a:hover .svg {
 
   img.portrait {
     display: inline;
-    width: 270px;
-    height: 270px;
-    margin-top: 31px;
+    width: 350px;
+    height: 350px;
+    margin-top: 110px;
     margin-left: 20px;
   }
 
