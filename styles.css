@@ -116,10 +116,6 @@ b {
   font-size: 1.125rem;
 }
 
-.intro li a {
-  text-underline-offset: 0.1rem;
-}
-
 .intro ul {
   list-style-type: circle;
 }
