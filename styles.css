@@ -356,9 +356,9 @@ a:hover .svg {
       ". projects";
     grid-template-rows: repeat(4, auto);
     grid-template-columns: 1fr minmax(min-content, 3fr);
-    gap: 200px 10%;
+    gap: 100px 10%;
     justify-content: space-between;
-    padding: 200px 80px;
+    padding: 200px 80px 100px 80px;
     margin: 0 auto;
   }
 
