@@ -45,28 +45,6 @@ main {
   max-width: fit-content;
 }
 
-nav {
-  display: none;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-nav ul li.active, nav ul li a:hover {
-  color: var(--primary);
-}
-
-nav ul li.active::before {
-  content: "•";
-  position: absolute;
-  left: -1rem;
-}
-
-nav ul li:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 a {
   color: inherit;
   text-decoration: solid underline var(--primary) 2px;
@@ -75,6 +53,10 @@ a {
 
 .intro a {
   text-underline-offset: 0.4rem;
+}
+
+.intro p {
+  margin-bottom: 10px;
 }
 
 a:hover {
@@ -111,12 +93,16 @@ b {
   content: "👋 \00a0 ";
 }
 
-.intro li {
+.projects p {
+  font-size: 1.125rem;
+}
+
+.projects li {
   margin-left: 1rem;
   font-size: 1.125rem;
 }
 
-.intro ul {
+.projects ul {
   list-style-type: circle;
 }
 
@@ -128,7 +114,7 @@ b {
   margin-bottom: 40px;
 }
 
-.intro p, li {
+.intro p {
   font-size: 1.125rem;
   line-height: 2rem;
   padding: inherit;
@@ -152,15 +138,6 @@ img.portrait {
 
 h2 {
   color: var(--primary);
-  font-weight: 600;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 10px 10px 10px 0;
-}
-
-nav ul li {
-  color: var(--text-color);
   font-weight: 600;
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -224,6 +201,10 @@ p.job-duration {
   color: var(--text-color-secondary);
   font-weight: 500;
   font-size: 0.875rem;
+}
+
+.projects p {
+  margin: 10px 0;
 }
 
 p.job-title {
@@ -368,10 +349,11 @@ a:hover .svg {
     max-width: 1284px;
     display: grid;
     grid-template-areas:
-      "intro intro intro"
-      "navbar . background"
-      "navbar . skills"
-      "navbar . experience";
+      "intro intro"
+      ". background"
+      ". skills"
+      ". experience"
+      ". projects";
     grid-template-rows: repeat(4, auto);
     grid-template-columns: 1fr minmax(min-content, 3fr);
     gap: 200px 10%;
@@ -392,17 +374,6 @@ a:hover .svg {
     font-size: 2.5rem;
   }
 
-  h2 {
-    display: none;
-  }
-
-  nav {
-    grid-area: navbar;
-    position: sticky;
-    align-self: start;
-    top: 10rem;
-    display: initial;
-  }
 
   .intro {
     padding: 10px 0;
@@ -430,5 +401,9 @@ a:hover .svg {
     grid-template-columns: 150px 3fr;
     column-gap: 46px;
     margin-bottom: 60px;
+  }
+
+  .projects {
+    grid-area: projects;
   }
 }
